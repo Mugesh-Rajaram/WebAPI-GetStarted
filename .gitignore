@@ -3,5 +3,5 @@
 ################################################################################
 .vs
 /packages
-/WebAPI-GetStarted/bin
-/WebAPI-GetStarted/obj
+/WebAPIGetStarted/bin
+/WebAPIGetStarted/obj/Debug
