@@ -1,22 +1,35 @@
 ﻿using System.Data;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using WebAPIGetStarted.Common;
 
 namespace WebAPIGetStarted.Controllers
 {
-    [MyControllerConfig]
+    //[MyControllerConfig]
+    //[RoutePrefix("api/test")]
+    [EnableCors("*", "*", "*")]
     public class TestSampleController : ApiController
     {
         // GET: api/TestSample
-        public DataSet Get()
+        [Route("ssql")]
+        public IHttpActionResult Get()
         {
             DataSet resultSet = SQLConnectivity.GetData();
 
             //return Content(HttpStatusCode.OK, resultSet, Configuration.Formatters.XmlFormatter);// 
-            return resultSet;
+            return Ok(resultSet);
+        }
+
+        [HttpGet, Route("str")]
+        public string GetData()
+        {
+            return "Success";
         }
 
         // GET: api/TestSample/5
+        [HttpGet, Route("val/{id}")]
         public string Get(int id)
         {
             return "value";
