@@ -1,7 +1,7 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-.vs
+/.vs
 /packages
 /WebAPIGetStarted/bin
 /WebAPIGetStarted/obj/Debug

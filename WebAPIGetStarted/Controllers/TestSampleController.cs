@@ -19,6 +19,7 @@ namespace WebAPIGetStarted.Controllers
             DataSet resultSet = SQLConnectivity.GetData();
 
             //return Content(HttpStatusCode.OK, resultSet, Configuration.Formatters.XmlFormatter);// 
+            dfasdfasd
             return Ok(resultSet);
         }
 
